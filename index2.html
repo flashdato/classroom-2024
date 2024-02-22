@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Website</title>
+</head>
+
+<body>
+    <h2>Your Name</h2>
+    <input type="text" id="name-input" placeholder="Your Name">
+    <button id="say-hello-button">Say Hello</button>
+    <p id="greeting-output"></p>
+
+    <script>
+
+        document.getElementById("say-hello-button").addEventListener("click", function () {
+            document.getElementById("greeting-output").textContent = `Hello ` +  document.getElementById("name-input").value.trim();
+        });
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Carousel</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #image-container {
+      text-align: center;
+    }
+
+    #displayed-image {
+      max-width: 100%;
+      max-height: 300px;
+      margin-bottom: 20px;
+    }
+
+    #next-button {
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="image-container">
+  <img id="displayed-image" src="image1.jpg" alt="Image 1">
+  <button id="next-button" onclick="changeImage()">Next Image</button>
+</div>
+
+<script>
+  let Num = 1;
+
+  function changeImage() {
+    Num = (Num % 4) + 1; // Assumes you have images named image1.jpg to image4.jpg
+    if(Num === 1)
+    document.getElementById("displayed-image").src = "image1.jpg";
+    if(Num === 2)
+    document.getElementById("displayed-image").src = "image2.jpg";
+    if(Num === 3)
+    document.getElementById("displayed-image").src = "image3.jpg";
+    if(Num === 4)
+    document.getElementById("displayed-image").src = "image4.jpg";
+  }
+</script>
+
+</body>
+</html>
